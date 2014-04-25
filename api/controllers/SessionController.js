@@ -87,7 +87,7 @@ module.exports = {
 
 					// Inform other sockets (e.g. connected sockets that are subscribed) that this user is now logged in
 					User.publishUpdate(user.id, {
-						online: true,
+						loggedIn: true,
 						id: user.id
 					});
 
@@ -117,7 +117,7 @@ module.exports = {
 
 				// Inform other sockets (e.g. connected sockets that are subscribed) that this user is now logged out
 				User.publishUpdate(user.id, {
-					online: false,
+					loggedIn: false,
 					id: user.id
 				});
 
